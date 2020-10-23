@@ -1,39 +1,39 @@
-import faker from "faker";
+import faker from 'faker'
 
-faker.seed(0);
+faker.seed(0)
 
 const defaultParams = {
   filter: false,
   skip: 0,
-  limit: false
-};
+  limit: false,
+}
 
 export default {
-  fetch: userParams =>
+  fetch: (userParams) =>
     new Promise((resolve, reject) => {
       if (Math.random() > 0.9) {
-        return reject("An error has occurred! Please try again.");
+        return reject('An error has occurred! Please try again.')
       }
 
       const { filter, skip, limit } = {
         ...defaultParams,
-        ...userParams
-      };
+        ...userParams,
+      }
 
       const allItems = Array.from(Array(200)).map((_, i) => ({
         id: i,
         title: faker.name.findName(),
-        description: faker.internet.email()
-      }));
+        description: faker.internet.email(),
+      }))
 
       const returnedItems = allItems
-        .filter(item =>
+        .filter((item) =>
           !filter
             ? true
             : item.title.includes(filter) || item.description.includes(filter)
         )
-        .slice(skip, skip + limit);
+        .slice(skip, skip + limit)
 
-      setTimeout(() => resolve(returnedItems), returnedItems * 10);
-    })
-};
+      setTimeout(() => resolve(returnedItems), returnedItems * 10)
+    }),
+}

@@ -3,9 +3,9 @@
  * Check `./components/App/App.js`
  */
 
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./components/App/App";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './components/App/App'
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+const rootElement = document.getElementById('root')
+ReactDOM.render(<App />, rootElement)

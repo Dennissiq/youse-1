@@ -1,7 +1,7 @@
-import API from "../../../services/api"
+import API from '../../../services/api'
 
 export default () => {
-    /**
+  /**
    * These items should be fetched from our API service.
    *
    * API.fetch(params?: {
@@ -14,7 +14,5 @@ export default () => {
    * >
    *
    **/
-    return {
-
-    }
+  return {}
 }
