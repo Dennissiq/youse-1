@@ -1,20 +1,7 @@
-import React from "react";
-// import API from "../../services/api";
+import React from "react"
+import enhancer from './hooks'
 
-export default function App() {
-  /**
-   * These items should be fetched from our API service.
-   *
-   * API.fetch(params?: {
-   *   filter?: string - filter by title or description
-   *   skip?: number   - skip x number of items
-   *   limit?: number  - limit result to x items
-   * }) : Promise<
-   *   success: item[]
-   *   error: string
-   * >
-   *
-   **/
+const App = () => {
   const items = [
     {
       id: 0,
@@ -26,7 +13,7 @@ export default function App() {
       title: "Fake name 2",
       description: "fake.email.2@email.com"
     }
-  ];
+  ]
 
   return (
     <main>
@@ -42,5 +29,7 @@ export default function App() {
         ))}
       </ul>
     </main>
-  );
+  )
 }
+
+export default enhancer(App)
