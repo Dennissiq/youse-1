@@ -1,18 +1,26 @@
 import API from '../../../services/api'
 
-export default () => {
-  /**
-   * These items should be fetched from our API service.
-   *
-   * API.fetch(params?: {
-   *   filter?: string - filter by title or description
-   *   skip?: number   - skip x number of items
-   *   limit?: number  - limit result to x items
-   * }) : Promise<
-   *   success: item[]
-   *   error: string
-   * >
-   *
-   **/
-  return {}
+export default ({ setFiltredItems }) => {
+  const updateResult = () => {
+    const urlParams = new URLSearchParams(window.location.search)
+    const filter = urlParams.get('filter') || ''
+    const skip = ~~urlParams.get('skip')
+    const limit = ~~urlParams.get('limit')
+
+    API.fetch({
+      filter,
+      skip,
+      limit,
+    })
+      .then((response) => {
+        setFiltredItems(response)
+      })
+      .catch((err) => {
+        console.log(err, 'err')
+      })
+  }
+
+  return {
+    updateResult,
+  }
 }
