@@ -15,6 +15,7 @@ export default createGlobalStyle`
   }
   input {
     width: 80vw;
+    max-width: 600px;
     margin: 30px auto;
     display: block;
     height: 40px;
