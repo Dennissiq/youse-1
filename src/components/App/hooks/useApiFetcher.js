@@ -4,8 +4,9 @@ import { getQueryString } from '../../../helpers/url'
 export default ({ setFiltredItems, setApiError }) => {
   const updateList = () => {
     const filter = getQueryString('filter') || ''
-    const skip = ~~getQueryString('skip')
-    const limit = ~~getQueryString('limit')
+    const page = ~~getQueryString('page') || 0
+    const limit = ~~getQueryString('limit') || 10
+    const skip = page * limit
 
     API.fetch({
       filter,
@@ -15,7 +16,7 @@ export default ({ setFiltredItems, setApiError }) => {
       .then((response) => {
         setFiltredItems(response)
       })
-      .catch((err) => {
+      .catch(() => {
         setApiError(true)
       })
   }
