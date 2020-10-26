@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { yellow } from '../constants'
 
 export default createGlobalStyle`
   * {
@@ -9,7 +10,7 @@ export default createGlobalStyle`
   body {
     background: #7d3caf;
     font-size: 14px;
-    color: #fcb017;
+    color: ${yellow};
     font-family: sans-serif;
   }
   input {
@@ -20,7 +21,7 @@ export default createGlobalStyle`
     padding-left: 10px;
     color: #2f3941;
     border-radius: 6px;
-    border: 1px solid #fcb017;
+    border: 1px solid ${yellow};
     text-align: center;
   }
   li {
