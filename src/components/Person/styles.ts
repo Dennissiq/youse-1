@@ -1,10 +1,8 @@
 import styled from 'styled-components'
 
-export const Li = styled.li`
+export const Div = styled.div`
   padding: 30px 20px;
-  &:nth-child(even) {
-    background-color: #6a418c;
-  }
+  background-color: ${(props: { modifier: number }) => props.modifier % 2 === 0 ? '#6a418c' : '#7d3caf'};
 `
 
 export const Article = styled.article`
@@ -17,14 +15,14 @@ export const Article = styled.article`
 
 export const H3 = styled.h3`
   font-size: 16px;
-  @media(max-width: 320px) {
+  @media (max-width: 320px) {
     font-size: 12px;
   }
 `
 
 export const Span = styled.span`
   font-size: 14px;
-  @media(max-width: 320px) {
+  @media (max-width: 320px) {
     font-size: 10px;
   }
 `

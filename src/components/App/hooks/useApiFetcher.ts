@@ -7,7 +7,9 @@ export const updateList = ({
   setFiltredItems,
   setEveryPeopleThatMatchesFilter,
   setApiError,
+  setIsLoading
 }: ApiFetcher) => {
+  setIsLoading(true)
   const filter = getQueryString('filter') || ''
   const page = ~~getQueryString('page') || 0
   const limit = ~~getQueryString('limit') || itemsPerPage
@@ -29,18 +31,23 @@ export const updateList = ({
     .catch((err) => {
       setApiError(err)
     })
+    .finally(() => {
+      setIsLoading(false)
+    })
 }
 
 export default ({
   setFiltredItems,
   setEveryPeopleThatMatchesFilter,
   setApiError,
+  setIsLoading
 }: ApiFetcher) => {
   const forceListUpdate = () =>
     updateList({
       setFiltredItems,
       setEveryPeopleThatMatchesFilter,
       setApiError,
+      setIsLoading
     })
 
   return {

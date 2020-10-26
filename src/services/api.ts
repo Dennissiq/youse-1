@@ -45,7 +45,7 @@ export default {
             filtredItems: paginatedItems,
             everyPeopleThatMatchesFilter,
           }),
-        10
+        750
       )
     }),
 }

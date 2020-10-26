@@ -7,6 +7,7 @@ export default () => {
     everyPeopleThatMatchesFilter,
     setEveryPeopleThatMatchesFilter,
   ] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
 
   return {
     filtredItems,
@@ -15,5 +16,7 @@ export default () => {
     setApiError,
     everyPeopleThatMatchesFilter,
     setEveryPeopleThatMatchesFilter,
+    isLoading,
+    setIsLoading
   }
 }

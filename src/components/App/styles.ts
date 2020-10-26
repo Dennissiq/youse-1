@@ -6,3 +6,7 @@ export const Title = styled.h1`
   text-align: center;
   text-transform: uppercase;
 `
+
+export const Loading = styled.div`
+  text-align: center;
+`

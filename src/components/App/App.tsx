@@ -7,8 +7,9 @@ import Person from '../../interfaces/Person'
 import GlobalStyle from '../../styles/global'
 import PersonLi from '../Person'
 import { getQueryString } from '../../helpers/url'
-import { Title } from './styles'
+import { Title, Loading } from './styles'
 import { itemsPerPage } from '../../constants'
+import { AnimatedList } from 'react-animated-list'
 
 const getPage = () => {
   return ~~getQueryString('page') || 0
@@ -24,6 +25,7 @@ const App = ({
   apiError,
   onPaginationItemClick,
   everyPeopleThatMatchesFilter,
+  isLoading
 }: AppProps) => (
   <main>
     <GlobalStyle />
@@ -36,13 +38,13 @@ const App = ({
     />
     {!!apiError ? (
       <ApiError text={apiError} />
-    ) : (
+    ) : !isLoading ? (
       <>
-        <ul>
-          {filtredItems.map((item: Person) => (
-            <PersonLi key={item.id} item={item} />
+        <AnimatedList animationProps={{ in: true }}>
+          {filtredItems.map((item: Person, key: number) => (
+            <PersonLi key={item.id} modifier={key} item={item} />
           ))}
-        </ul>
+        </AnimatedList>
         <ReactPaginate
           pageCount={everyPeopleThatMatchesFilter.length / getLimit()}
           pageRangeDisplayed={2}
@@ -56,6 +58,8 @@ const App = ({
           forcePage={getPage()}
         />
       </>
+    ) : (
+      <Loading>Loading...</Loading>
     )}
   </main>
 )
