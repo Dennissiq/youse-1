@@ -36,7 +36,7 @@ I'm doing the pseudo request everytime that the users change the filter, page, o
 
 As you'll see on the page, I'm taking the second option, where I handle the API as if it was a real API and like it could change anytime (it does hehe). That's the reason why when you go to the page 2 then go to the page 1, the results are different, or when you type somenthing that you are seeing that existis and on the next character it doesn't return anymore, because Faker are generating a new array on every request.
 
-I'm choose to use typescript and styled-components.
+I choosed to use typescript and styled-components.
 
 ## &filter
 
