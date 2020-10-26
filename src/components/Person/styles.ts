@@ -2,10 +2,6 @@ import styled from 'styled-components'
 
 export const Li = styled.li`
   padding: 30px 20px;
-  border-top: 1px solid #ccc;
-  &:last-of-type {
-    border-bottom: 1px solid #ccc;
-  }
   &:nth-child(even) {
     background-color: #6a418c;
   }
