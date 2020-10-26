@@ -1,4 +1,4 @@
-export const updateQueryString = (key, value) => {
+export const updateQueryString = (key: string, value: string) => {
   const urlParams = new URLSearchParams(window.location.search)
   urlParams.set(key, value)
   var newurl = `${window.location.protocol}//${window.location.host}${
@@ -7,7 +7,7 @@ export const updateQueryString = (key, value) => {
   window.history.pushState({ path: newurl }, '', newurl)
 }
 
-export const getQueryString = (key) => {
+export const getQueryString = (key: string) => {
   const urlParams = new URLSearchParams(window.location.search)
-  return urlParams.get(key)
+  return urlParams.get(key) || ''
 }

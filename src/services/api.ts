@@ -1,4 +1,5 @@
 import faker from 'faker'
+import Person from '../interfaces/Person'
 
 faker.seed(0)
 
@@ -9,8 +10,8 @@ const defaultParams = {
 }
 
 export default {
-  fetch: (userParams) =>
-    new Promise((resolve, reject) => {
+  fetch: (userParams: { skip: number; filter: string; limit: number }) =>
+    new Promise<any>((resolve, reject) => {
       if (Math.random() > 0.9) {
         return reject('An error has occurred! Please try again.')
       }
@@ -26,14 +27,13 @@ export default {
         description: faker.internet.email(),
       }))
 
-      const returnedItems = allItems
+      const returnedItems: Array<Person> = allItems
         .filter((item) =>
           !filter
             ? true
             : item.title.includes(filter) || item.description.includes(filter)
         )
         .slice(skip, skip + limit)
-      console.log(allItems, returnedItems)
-      setTimeout(() => resolve(returnedItems), returnedItems * 10)
+      setTimeout(() => resolve(returnedItems), 10)
     }),
 }

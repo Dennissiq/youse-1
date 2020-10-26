@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default (...layers) => (BaseComponent) => {
-  return (props) => {
-    const hooksProps = layers.reduce((prevProps, layer) => {
+export default (...layers: Array<Function>) => (BaseComponent: Function) => {
+  return (props: object) => {
+    const hooksProps = layers.reduce((prevProps: object, layer: Function) => {
       const layerProps = layer.call(null, { ...props, ...prevProps })
       return {
         ...prevProps,

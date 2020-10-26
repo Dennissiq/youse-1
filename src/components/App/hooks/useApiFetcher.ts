@@ -1,7 +1,12 @@
 import API from '../../../services/api'
 import { getQueryString } from '../../../helpers/url'
 
-export default ({ setFiltredItems, setApiError }) => {
+interface ApiFetcher {
+  setFiltredItems: React.Dispatch<React.SetStateAction<string>>
+  setApiError: React.Dispatch<React.SetStateAction<string>>
+}
+
+export default ({ setFiltredItems, setApiError }: ApiFetcher) => {
   const updateList = () => {
     const filter = getQueryString('filter') || ''
     const page = ~~getQueryString('page') || 0
@@ -16,7 +21,7 @@ export default ({ setFiltredItems, setApiError }) => {
       .then((response) => {
         setFiltredItems(response)
         const apiError = response.length
-          ? false
+          ? ''
           : `No results was found for ${filter} :(`
         setApiError(apiError)
       })
