@@ -5,6 +5,10 @@ import ReactPaginate from 'react-paginate'
 import { AppProps } from '../../interfaces'
 import Person from '../../interfaces/Person'
 import { itemsPerPage } from '../../constants'
+import GlobalStyle from '../../styles/global'
+import PersonLi from '../Person'
+import { getQueryString } from '../../helpers/url'
+import { Title } from './styles'
 
 const App = ({
   filtredItems,
@@ -14,32 +18,37 @@ const App = ({
   everyPeopleThatMatchesFilter,
 }: AppProps) => (
   <main>
+    <GlobalStyle />
+    <Title>Youse front-end test</Title>
     <input
       onChange={onInputChange}
       type="text"
-      placeholder="search name or email"
+      placeholder="Search name or email"
       id="search-box"
     />
     {!!apiError ? (
       <ApiError text={apiError} />
     ) : (
-      <ul>
-        {filtredItems.map((item: Person) => (
-          <li key={item.id}>
-            <article>
-              <h1>{item.title}</h1>
-              <p>{item.description}</p>
-            </article>
-          </li>
-        ))}
-      </ul>
+      <>
+        <ul>
+          {filtredItems.map((item: Person) => (
+            <PersonLi key={item.id} item={item} />
+          ))}
+        </ul>
+        <ReactPaginate
+          pageCount={everyPeopleThatMatchesFilter.length / itemsPerPage}
+          pageRangeDisplayed={2}
+          marginPagesDisplayed={1}
+          onPageChange={updatePagination}
+          pageClassName="paginate__item"
+          containerClassName="paginate"
+          breakClassName="paginate__dots"
+          previousLabel="<"
+          nextLabel=">"
+          forcePage={~~getQueryString('page')}
+        />
+      </>
     )}
-    <ReactPaginate
-      pageCount={everyPeopleThatMatchesFilter.length / itemsPerPage}
-      pageRangeDisplayed={3}
-      marginPagesDisplayed={3}
-      onPageChange={updatePagination}
-    />
   </main>
 )
 
