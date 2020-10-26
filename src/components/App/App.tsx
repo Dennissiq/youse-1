@@ -4,11 +4,18 @@ import ApiError from '../ApiError'
 import ReactPaginate from 'react-paginate'
 import { AppProps } from '../../interfaces'
 import Person from '../../interfaces/Person'
-import { itemsPerPage } from '../../constants'
 import GlobalStyle from '../../styles/global'
 import PersonLi from '../Person'
 import { getQueryString } from '../../helpers/url'
 import { Title } from './styles'
+
+const getPage = () => {
+  return ~~getQueryString('page')
+}
+
+const getLimit = () => {
+  return ~~getQueryString('limit')
+}
 
 const App = ({
   filtredItems,
@@ -36,7 +43,7 @@ const App = ({
           ))}
         </ul>
         <ReactPaginate
-          pageCount={everyPeopleThatMatchesFilter.length / itemsPerPage}
+          pageCount={everyPeopleThatMatchesFilter.length / getLimit()}
           pageRangeDisplayed={2}
           marginPagesDisplayed={1}
           onPageChange={updatePagination}
@@ -45,7 +52,7 @@ const App = ({
           breakClassName="paginate__dots"
           previousLabel="<"
           nextLabel=">"
-          forcePage={~~getQueryString('page')}
+          forcePage={getPage()}
         />
       </>
     )}
