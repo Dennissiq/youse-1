@@ -8,13 +8,14 @@ import GlobalStyle from '../../styles/global'
 import PersonLi from '../Person'
 import { getQueryString } from '../../helpers/url'
 import { Title } from './styles'
+import { itemsPerPage } from '../../constants'
 
 const getPage = () => {
-  return ~~getQueryString('page')
+  return ~~getQueryString('page') || 0
 }
 
 const getLimit = () => {
-  return ~~getQueryString('limit')
+  return ~~getQueryString('limit') || itemsPerPage
 }
 
 const App = ({
