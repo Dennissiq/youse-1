@@ -1,9 +1,14 @@
 import React from 'react'
 import enhancer from './hooks'
 
-const App = ({ filtredItems }) => (
+const App = ({ filtredItems, onInputChange }) => (
   <main>
-    <input type="text" placeholder="search name or email" />
+    <input
+      onChange={onInputChange}
+      type="text"
+      placeholder="search name or email"
+      id="search-box"
+    />
     <ul>
       {filtredItems.map((item) => (
         <li key={item.id}>

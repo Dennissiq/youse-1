@@ -1,11 +1,11 @@
 import API from '../../../services/api'
+import { getQueryString } from '../../../helpers/url'
 
-export default ({ setFiltredItems }) => {
-  const updateResult = () => {
-    const urlParams = new URLSearchParams(window.location.search)
-    const filter = urlParams.get('filter') || ''
-    const skip = ~~urlParams.get('skip')
-    const limit = ~~urlParams.get('limit')
+export default ({ setFiltredItems, setApiError }) => {
+  const updateList = () => {
+    const filter = getQueryString('filter') || ''
+    const skip = ~~getQueryString('skip')
+    const limit = ~~getQueryString('limit')
 
     API.fetch({
       filter,
@@ -16,11 +16,11 @@ export default ({ setFiltredItems }) => {
         setFiltredItems(response)
       })
       .catch((err) => {
-        console.log(err, 'err')
+        setApiError(true)
       })
   }
 
   return {
-    updateResult,
+    updateList,
   }
 }

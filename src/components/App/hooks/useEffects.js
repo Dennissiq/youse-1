@@ -1,8 +1,15 @@
 import { useEffect } from 'react'
+import { getQueryString } from '../../../helpers/url'
 
-export default ({ updateResult }) => {
+const updateSearchBoxValue = () => {
+  const searchBox = document.getElementById('search-box')
+  searchBox.value = getQueryString('filter')
+}
+
+export default ({ updateList }) => {
   useEffect(() => {
-    updateResult()
+    updateSearchBoxValue()
+    updateList()
   }, [])
   return {}
 }
