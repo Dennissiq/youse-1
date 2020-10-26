@@ -1,10 +1,18 @@
 import React from 'react'
 import enhancer from './hooks'
 import ApiError from '../ApiError'
+import ReactPaginate from 'react-paginate'
 import { AppProps } from '../../interfaces'
 import Person from '../../interfaces/Person'
+import { itemsPerPage } from '../../constants'
 
-const App = ({ filtredItems, onInputChange, apiError }: AppProps) => (
+const App = ({
+  filtredItems,
+  onInputChange,
+  apiError,
+  updatePagination,
+  everyPeopleThatMatchesFilter,
+}: AppProps) => (
   <main>
     <input
       onChange={onInputChange}
@@ -26,6 +34,12 @@ const App = ({ filtredItems, onInputChange, apiError }: AppProps) => (
         ))}
       </ul>
     )}
+    <ReactPaginate
+      pageCount={everyPeopleThatMatchesFilter.length / itemsPerPage}
+      pageRangeDisplayed={3}
+      marginPagesDisplayed={3}
+      onPageChange={updatePagination}
+    />
   </main>
 )
 

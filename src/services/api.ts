@@ -27,13 +27,25 @@ export default {
         description: faker.internet.email(),
       }))
 
-      const returnedItems: Array<Person> = allItems
-        .filter((item) =>
+      const everyPeopleThatMatchesFilter: Array<Person> = allItems.filter(
+        (item) =>
           !filter
             ? true
             : item.title.includes(filter) || item.description.includes(filter)
-        )
-        .slice(skip, skip + limit)
-      setTimeout(() => resolve(returnedItems), 10)
+      )
+
+      const paginatedItems = everyPeopleThatMatchesFilter.slice(
+        skip,
+        skip + limit
+      )
+
+      setTimeout(
+        () =>
+          resolve({
+            filtredItems: paginatedItems,
+            everyPeopleThatMatchesFilter,
+          }),
+        10
+      )
     }),
 }
