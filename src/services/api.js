@@ -33,7 +33,7 @@ export default {
             : item.title.includes(filter) || item.description.includes(filter)
         )
         .slice(skip, skip + limit)
-
+      console.log(allItems, returnedItems)
       setTimeout(() => resolve(returnedItems), returnedItems * 10)
     }),
 }

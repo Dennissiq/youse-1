@@ -15,9 +15,13 @@ export default ({ setFiltredItems, setApiError }) => {
     })
       .then((response) => {
         setFiltredItems(response)
+        const apiError = response.length
+          ? false
+          : `No results was found for ${filter} :(`
+        setApiError(apiError)
       })
-      .catch(() => {
-        setApiError(true)
+      .catch((err) => {
+        setApiError(err)
       })
   }
 

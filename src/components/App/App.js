@@ -1,7 +1,8 @@
 import React from 'react'
 import enhancer from './hooks'
+import ApiError from '../ApiError'
 
-const App = ({ filtredItems, onInputChange }) => (
+const App = ({ filtredItems, onInputChange, apiError }) => (
   <main>
     <input
       onChange={onInputChange}
@@ -9,16 +10,20 @@ const App = ({ filtredItems, onInputChange }) => (
       placeholder="search name or email"
       id="search-box"
     />
-    <ul>
-      {filtredItems.map((item) => (
-        <li key={item.id}>
-          <article>
-            <h1>{item.title}</h1>
-            <p>{item.description}</p>
-          </article>
-        </li>
-      ))}
-    </ul>
+    {apiError ? (
+      <ApiError text={apiError} />
+    ) : (
+      <ul>
+        {filtredItems.map((item) => (
+          <li key={item.id}>
+            <article>
+              <h1>{item.title}</h1>
+              <p>{item.description}</p>
+            </article>
+          </li>
+        ))}
+      </ul>
+    )}
   </main>
 )
 
