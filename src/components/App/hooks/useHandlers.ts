@@ -7,7 +7,7 @@ export default ({ updateList }: { updateList: Function }) => ({
     updateQueryString('filter', value)
     updateList()
   },
-  updatePagination: (selectedItem: { selected: number }) => {
+  onPaginationItemClick: (selectedItem: { selected: number }) => {
     const { selected } = selectedItem
     updateQueryString('page', `${selected}`)
     updateList()

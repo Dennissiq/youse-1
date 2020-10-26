@@ -21,7 +21,7 @@ const App = ({
   filtredItems,
   onInputChange,
   apiError,
-  updatePagination,
+  onPaginationItemClick,
   everyPeopleThatMatchesFilter,
 }: AppProps) => (
   <main>
@@ -46,7 +46,7 @@ const App = ({
           pageCount={everyPeopleThatMatchesFilter.length / getLimit()}
           pageRangeDisplayed={2}
           marginPagesDisplayed={1}
-          onPageChange={updatePagination}
+          onPageChange={onPaginationItemClick}
           pageClassName="paginate__item"
           containerClassName="paginate"
           breakClassName="paginate__dots"
