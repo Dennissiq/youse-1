@@ -8,6 +8,6 @@ export default () => {
     filtredItems,
     setFiltredItems,
     apiError,
-    setApiError
+    setApiError,
   }
 }
