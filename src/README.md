@@ -8,12 +8,12 @@ A idéia é simples: criar uma simples aplicação de listagem com filtro que co
 
 ## Requisitos Mínimos
 
-- Listar os items retornados pelo serviço. - done
-- Utilizar o campo de texto para filtrar sua lista. - done
+- Listar os items retornados pelo serviço.
+- Utilizar o campo de texto para filtrar sua lista.
 
 ## Desafios opcionais
 
-- Utilizar os parâmetros opcionais do serviço para paginar sua lista. - done
+- Utilizar os parâmetros opcionais do serviço para paginar sua lista.
 - Mostrar suas habilidades visuais para criar uma interface interessante para a listagem.
-- Lidar com estados de excessão – buscamos algo que não foi encontrado? A API retornou um erro? - done
+- Lidar com estados de excessão – buscamos algo que não foi encontrado? A API retornou um erro?
 - O que mais você imaginar!
