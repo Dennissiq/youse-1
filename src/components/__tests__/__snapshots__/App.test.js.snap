@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<main>
+  <h1
+    className="sc-hKFyIo dOHKSD"
+  >
+    Youse front-end test
+  </h1>
+  <div
+    className="sc-jSFkmK aSxLX"
+  >
+    <input
+      id="search-box"
+      onChange={[Function]}
+      placeholder="Search name or email"
+      type="text"
+    />
+    <svg
+      className="sc-dlnjPT crgVzT"
+      display="block"
+      height="40"
+      preserveAspectRatio="xMidYMid"
+      viewBox="0 0 100 100"
+      width="40"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g>
+        <path
+          d="M50 24a26 26 0 1024.727 17.966"
+          fill="none"
+          stroke="#7d3caf"
+          strokeWidth="14"
+        />
+        <path
+          d="M49 7v34l17-17L49 7"
+          fill="#7d3caf"
+        />
+      </g>
+    </svg>
+  </div>
+  <div
+    className="sc-gKAblj etEefO header"
+  >
+    <article
+      className="sc-iCoHVE iXmOCz"
+    >
+      <h3
+        className="sc-fujyUd fHELYF"
+      >
+        Name
+      </h3>
+      <span
+        className="sc-pNWxx ksSyin"
+      >
+        Email
+      </span>
+    </article>
+  </div>
+</main>
+`;

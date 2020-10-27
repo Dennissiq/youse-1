@@ -11,7 +11,7 @@ export default ({
   modifier: number
   header: boolean
 }) => (
-  <Div modifier={modifier}>
+  <Div className={header ? 'header' : ''} modifier={modifier}>
     <Article>
       <H3 header={header}>{item.title}</H3>
       <Span header={header}>{item.description}</Span>

@@ -16,7 +16,7 @@ export default ({ isLoading }: { isLoading: boolean }) => (
         d="M50 24a26 26 0 1024.727 17.966"
         fill="none"
         stroke="#7d3caf"
-        stroke-width="14"
+        strokeWidth="14"
       />
       <path d="M49 7v34l17-17L49 7" fill="#7d3caf" />
     </g>
