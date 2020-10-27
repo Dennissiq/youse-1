@@ -1,15 +1,16 @@
 import React from 'react'
+import { AnimatedList } from 'react-animated-list'
+import ReactPaginate from 'react-paginate'
 import enhancer from './hooks'
 import ApiError from '../ApiError'
-import ReactPaginate from 'react-paginate'
 import AppProps from '../../interfaces/AppProps'
 import Person from '../../interfaces/Person'
 import GlobalStyle from '../../styles/global'
 import PersonLi from '../Person'
 import { getQueryString } from '../../helpers/url'
-import { Title, Loading } from './styles'
+import { Title, Loading, InputHolder } from './styles'
 import { itemsPerPage } from '../../constants'
-import { AnimatedList } from 'react-animated-list'
+import Loader from '../Loader'
 
 const getPage = () => {
   return ~~getQueryString('page') || 0
@@ -25,17 +26,20 @@ const App = ({
   apiError,
   onPaginationItemClick,
   everyPeopleThatMatchesFilter,
-  isLoading
+  isLoading,
 }: AppProps) => (
   <main>
     <GlobalStyle />
     <Title>Youse front-end test</Title>
-    <input
-      onChange={onInputChange}
-      type="text"
-      placeholder="Search name or email"
-      id="search-box"
-    />
+    <InputHolder>
+      <input
+        onChange={onInputChange}
+        type="text"
+        placeholder="Search name or email"
+        id="search-box"
+      />
+      <Loader isLoading={isLoading} />
+    </InputHolder>
     {!!apiError ? (
       <ApiError text={apiError} />
     ) : !isLoading ? (

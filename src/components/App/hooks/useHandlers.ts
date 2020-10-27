@@ -1,11 +1,39 @@
 import { updateQueryString } from '../../../helpers/url'
+import OnInputChange from '../../../interfaces/OnInputChange'
 
-export default ({ forceListUpdate }: { forceListUpdate: Function }) => ({
+const typingTimeout = (forceListUpdate: Function) =>
+  setTimeout(() => {
+    forceListUpdate()
+  }, 500)
+
+const waitForTypingThenUpdateList = ({
+  setUserIsTyping,
+  setTypingTimeoutId,
+  forceListUpdate,
+  typingTimeoutId,
+}: OnInputChange) => {
+  setUserIsTyping(true)
+  setTypingTimeoutId(typingTimeout(forceListUpdate))
+  clearTimeout(typingTimeoutId)
+}
+
+export default ({
+  forceListUpdate,
+  setUserIsTyping,
+  setTypingTimeoutId,
+  typingTimeoutId,
+}: OnInputChange) => ({
   onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.currentTarget
     updateQueryString('page', '0')
     updateQueryString('filter', value)
-    forceListUpdate()
+
+    waitForTypingThenUpdateList({
+      setUserIsTyping,
+      setTypingTimeoutId,
+      forceListUpdate,
+      typingTimeoutId,
+    })
   },
   onPaginationItemClick: (selectedItem: { selected: number }) => {
     const { selected } = selectedItem

@@ -8,6 +8,8 @@ export default () => {
     setEveryPeopleThatMatchesFilter,
   ] = useState([])
   const [isLoading, setIsLoading] = useState(false)
+  const [userIsTyping, setUserIsTyping] = useState(false)
+  const [typingTimeoutId, setTypingTimeoutId] = useState(0)
 
   return {
     filtredItems,
@@ -17,6 +19,10 @@ export default () => {
     everyPeopleThatMatchesFilter,
     setEveryPeopleThatMatchesFilter,
     isLoading,
-    setIsLoading
+    setIsLoading,
+    userIsTyping,
+    setUserIsTyping,
+    typingTimeoutId,
+    setTypingTimeoutId,
   }
 }

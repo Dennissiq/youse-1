@@ -7,7 +7,7 @@ export const updateList = ({
   setFiltredItems,
   setEveryPeopleThatMatchesFilter,
   setApiError,
-  setIsLoading
+  setIsLoading,
 }: ApiFetcher) => {
   setIsLoading(true)
   const filter = getQueryString('filter') || ''
@@ -40,14 +40,14 @@ export default ({
   setFiltredItems,
   setEveryPeopleThatMatchesFilter,
   setApiError,
-  setIsLoading
+  setIsLoading,
 }: ApiFetcher) => {
   const forceListUpdate = () =>
     updateList({
       setFiltredItems,
       setEveryPeopleThatMatchesFilter,
       setApiError,
-      setIsLoading
+      setIsLoading,
     })
 
   return {
