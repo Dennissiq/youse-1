@@ -97,6 +97,10 @@ The hooks folder (only if needed, take a look at src/helpers/composeEnhancer):
 And the component file:
 `index.tsx`
 
+### __tests__
+
+Contains snapshots tests with jest.
+
 ---
 
 ## src/constants
