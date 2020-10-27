@@ -84,6 +84,8 @@ Default: 10
 
 # 📁 Folder structure
 
+I like to let every .tsx file just with the markup. Every kind of logic, interfaces, styles, etc, I like to separate from the .tsx element to let it simple to read.
+
 ## src/components
 
 Here you'll find every component that I'm using. Inside each component folder, I let the style file:
