@@ -7,26 +7,17 @@ import AppProps from '../../interfaces/AppProps'
 import Person from '../../interfaces/Person'
 import GlobalStyle from '../../styles/global'
 import PersonLi from '../Person'
-import { getQueryString } from '../../helpers/url'
-import { Title, Loading, InputHolder } from './styles'
-import { itemsPerPage } from '../../constants'
 import Loader from '../Loader'
-
-const getPage = () => {
-  return ~~getQueryString('page') || 0
-}
-
-const getLimit = () => {
-  return ~~getQueryString('limit') || itemsPerPage
-}
+import { Title, Loading, InputHolder } from './styles'
 
 const App = ({
   filtredItems,
   onInputChange,
   apiError,
   onPaginationItemClick,
-  everyPeopleThatMatchesFilter,
   isLoading,
+  currentPage,
+  pageCount
 }: AppProps) => (
   <main>
     <GlobalStyle />
@@ -49,18 +40,20 @@ const App = ({
             <PersonLi key={item.id} modifier={key} item={item} />
           ))}
         </AnimatedList>
-        <ReactPaginate
-          pageCount={everyPeopleThatMatchesFilter.length / getLimit()}
-          pageRangeDisplayed={2}
-          marginPagesDisplayed={1}
-          onPageChange={onPaginationItemClick}
-          pageClassName="paginate__item"
-          containerClassName="paginate"
-          breakClassName="paginate__dots"
-          previousLabel="<"
-          nextLabel=">"
-          forcePage={getPage()}
-        />
+        {pageCount > 1 &&
+          <ReactPaginate
+            pageCount={pageCount}
+            pageRangeDisplayed={2}
+            marginPagesDisplayed={1}
+            onPageChange={onPaginationItemClick}
+            pageClassName="paginate__item"
+            containerClassName="paginate"
+            breakClassName="paginate__dots"
+            previousLabel="<"
+            nextLabel=">"
+            forcePage={currentPage}
+          />
+        }
       </>
     ) : (
       <Loading>Loading...</Loading>

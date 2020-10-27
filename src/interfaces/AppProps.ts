@@ -5,6 +5,7 @@ export default interface AppProps {
   onInputChange(e: React.ChangeEvent<HTMLInputElement>): void
   apiError: string
   onPaginationItemClick(selectedItem: { selected: number }): void
-  everyPeopleThatMatchesFilter: Array<Person>
   isLoading: boolean
+  currentPage: number
+  pageCount: number
 }
