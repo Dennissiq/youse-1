@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const Div = styled.div`
   padding: 30px 20px;
-  background-color: ${(props: { modifier: number }) =>
-    props.modifier % 2 === 0 ? '#6a418c' : '#7d3caf'};
+  background-color: ${({ modifier }: { modifier: number }) =>
+    modifier % 2 === 0 ? '#6a418c' : '#7d3caf'};
 `
 
 export const Article = styled.article`
@@ -16,13 +16,21 @@ export const Article = styled.article`
 
 export const H3 = styled.h3`
   font-size: 16px;
+  ${({ header }: { header: boolean }) =>
+    header ? `font-weight: bold;` : `font-weight: normal; color: #fff;`};
   @media (max-width: 320px) {
     font-size: 12px;
   }
 `
 
 export const Span = styled.span`
-  font-size: 14px;
+  ${({ header }: { header: boolean }) =>
+    header
+      ? `font-size: 16px;
+  font-weight: bold;`
+      : `font-size: 14px;
+  font-weight: normal;
+  color: #fff;`};
   @media (max-width: 320px) {
     font-size: 10px;
   }

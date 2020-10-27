@@ -6,7 +6,7 @@ import ApiError from '../ApiError'
 import AppProps from '../../interfaces/AppProps'
 import Person from '../../interfaces/Person'
 import GlobalStyle from '../../styles/global'
-import PersonLi from '../Person'
+import PersonDiv from '../Person'
 import Loader from '../Loader'
 import { Title, Loading, InputHolder } from './styles'
 
@@ -35,9 +35,20 @@ const App = ({
       <ApiError text={apiError} />
     ) : !isLoading ? (
       <>
+        <PersonDiv
+          key={'1'}
+          modifier={1}
+          header
+          item={{ id: 0, title: 'Name', description: 'Email' }}
+        />
         <AnimatedList animationProps={{ in: true }}>
           {filtredItems.map((item: Person, key: number) => (
-            <PersonLi key={item.id} modifier={key} item={item} />
+            <PersonDiv
+              header={false}
+              key={item.id}
+              modifier={key}
+              item={item}
+            />
           ))}
         </AnimatedList>
         {pageCount > 1 && (
