@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 Array [
   <div
-    className="sc-bdnylx hmsItK header"
+    className="sc-bdnylx jQvQpK header"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -21,7 +21,7 @@ Array [
     </article>
   </div>,
   <div
-    className="sc-bdnylx cGtWYy"
+    className="sc-bdnylx kIJtuq"
   >
     <article
       className="sc-gtssRu dLuDwB"

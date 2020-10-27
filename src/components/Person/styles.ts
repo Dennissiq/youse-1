@@ -4,6 +4,11 @@ export const Div = styled.div`
   padding: 30px 20px;
   background-color: ${({ modifier }: { modifier: number }) =>
     modifier % 2 === 0 ? '#6a418c' : '#7d3caf'};
+
+  &.header {
+    opacity: 0;
+    transition: opacity .5s linear;
+  }
   
   transition: transform .75s ease-in-out;
   
@@ -14,17 +19,12 @@ export const Div = styled.div`
     transform: translateX(100vw);
     `}
 
-    &.header {
-      opcaity: 0;
-      transition: opacity .5s linear
-    }
-
     article {
       opacity: 0;
     }
   }
 
-  &.header {
+  &.header.enter-done {
     transform: translateX(0);
     opacity: 1;
   }

@@ -40,7 +40,7 @@ exports[`renders correctly 1`] = `
     </svg>
   </div>
   <div
-    className="sc-gKAblj etEefO header"
+    className="sc-gKAblj cvgmLy header"
   >
     <article
       className="sc-iCoHVE iXmOCz"
