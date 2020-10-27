@@ -2,7 +2,11 @@ import { getQueryString } from '../../../helpers/url'
 import { itemsPerPage } from '../../../constants'
 import Person from '../../../interfaces/Person'
 
-export default ({ everyPeopleThatMatchesFilter }: { everyPeopleThatMatchesFilter: Array<Person> }) => {
+export default ({
+  everyPeopleThatMatchesFilter,
+}: {
+  everyPeopleThatMatchesFilter: Array<Person>
+}) => {
   const getCurrentPage = () => {
     return ~~getQueryString('page') || 0
   }
@@ -17,6 +21,6 @@ export default ({ everyPeopleThatMatchesFilter }: { everyPeopleThatMatchesFilter
 
   return {
     currentPage: getCurrentPage(),
-    pageCount: getPageCount()
+    pageCount: getPageCount(),
   }
 }

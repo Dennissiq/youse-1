@@ -1,5 +1,7 @@
 # youse front-end test
 
+Link: https://youse-paulo.netlify.app/
+
 Hi! I hope you like my test!
 I decided to maintain it simple, adding just the necessary for a clean and understandable code.
 
@@ -29,40 +31,58 @@ $ git clone https://github.com/paulpetone/youse.git && cd youse && yarn
 
 `$ serve -s build`
 
-# My idea
+# 💡 My idea
+
+## About faker
 
 To solve the filter problem, I used query string as my states.
 I'm doing the pseudo request everytime that the users change the filter, page, or limit. This cause me a little dilema becase everytime that I call the API, it returns a hole new Array of People. So I asked myself if I should just do a single request and save the response on a state or treat like a real API where the database can change everytime, as the response.
 
 As you'll see on the page, I'm taking the second option, where I handle the API as if it was a real API and like it could change anytime (it does hehe). That's the reason why when you go to the page 2 then go to the page 1, the results are different, or when you type somenthing that you are seeing that existis and on the next character it doesn't return anymore, because Faker are generating a new array on every request.
 
-I choosed to use typescript and styled-components.
+---
 
-## &filter
+## ⚛️ Stack and libs
+
+I choosed to use typescript, styled-components, react-paginate for pagination and react-animated-list to animate the list.
+
+---
+
+## 👨‍💻 userIsTyping
+
+I created a state that defines if the user is typing. If so, I'll wait a few moments after the last char before send the pseudo request. I did this because if it was a real API, it could cause some problems with a lot of requests going on for each char typed.
+
+---
+
+## Query String
+
+### &filter
 
 It's the term that will be filtered
 
-Example: http://localhost:3000/?filter=a
+Example: https://youse-paulo.netlify.app/?filter=a
 
 Default: ''
 
-## &page
+### &page
 
 It's the page that will be rendered
 
-Example: http://localhost:3000/?filter=a&page=1
+Example: https://youse-paulo.netlify.app/?filter=a&page=1
 
 Default: 0
 
-## &limit
+### &limit
 
 It's how many items will be show
 
-Example: http://localhost:3000/?filter=a&page=1&limit=3
+Example: https://youse-paulo.netlify.app/?filter=a&page=1&limit=3
 
 Default: 10
 
-# Folder structure
+---
+
+# 📁 Folder structure
 
 ## src/components
 

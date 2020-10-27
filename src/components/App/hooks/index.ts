@@ -5,4 +5,10 @@ import useStates from './useStates'
 import useHandlers from './useHandlers'
 import mapProps from './mapProps'
 
-export default compose(useStates, useApiFetcher, useEffects, useHandlers, mapProps)
+export default compose(
+  useStates,
+  useApiFetcher,
+  useEffects,
+  useHandlers,
+  mapProps
+)

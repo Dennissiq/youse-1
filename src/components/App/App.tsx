@@ -17,7 +17,7 @@ const App = ({
   onPaginationItemClick,
   isLoading,
   currentPage,
-  pageCount
+  pageCount,
 }: AppProps) => (
   <main>
     <GlobalStyle />
@@ -40,7 +40,7 @@ const App = ({
             <PersonLi key={item.id} modifier={key} item={item} />
           ))}
         </AnimatedList>
-        {pageCount > 1 &&
+        {pageCount > 1 && (
           <ReactPaginate
             pageCount={pageCount}
             pageRangeDisplayed={2}
@@ -53,7 +53,7 @@ const App = ({
             nextLabel=">"
             forcePage={currentPage}
           />
-        }
+        )}
       </>
     ) : (
       <Loading>Loading...</Loading>
