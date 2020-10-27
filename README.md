@@ -74,7 +74,7 @@ Default: 0
 
 ### &limit
 
-It's how many items will be show
+It's how many items will be shown
 
 Example: https://youse-paulo.netlify.app/?filter=a&page=1&limit=3
 
@@ -86,7 +86,7 @@ Default: 10
 
 ## src/components
 
-Here you'll find every component that I'm using. Inside earch component folder, I let the style file:
+Here you'll find every component that I'm using. Inside each component folder, I let the style file:
 `style.ts`
 
 The hooks folder (only if needed, take a look at src/helpers/composeEnhancer):
