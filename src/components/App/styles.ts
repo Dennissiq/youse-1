@@ -10,10 +10,3 @@ export const Title = styled.h1`
 export const Loading = styled.div`
   text-align: center;
 `
-
-export const InputHolder = styled.div`
-  width: 80vw;
-  max-width: 600px;
-  margin: 0 auto;
-  position: relative;
-`

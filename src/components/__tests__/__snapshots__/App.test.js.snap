@@ -3,12 +3,12 @@
 exports[`renders correctly 1`] = `
 <main>
   <h1
-    className="sc-hKFyIo dOHKSD"
+    className="sc-eCApGN cLJKVD"
   >
     Youse front-end test
   </h1>
   <div
-    className="sc-jSFkmK aSxLX"
+    className="sc-dlnjPT igVtGp"
   >
     <input
       id="search-box"
@@ -17,7 +17,7 @@ exports[`renders correctly 1`] = `
       type="text"
     />
     <svg
-      className="sc-dlnjPT crgVzT"
+      className="sc-hKFyIo NiSXV"
       display="block"
       height="40"
       preserveAspectRatio="xMidYMid"
@@ -40,7 +40,7 @@ exports[`renders correctly 1`] = `
     </svg>
   </div>
   <div
-    className="sc-gKAblj cvgmLy header"
+    className="sc-gKAblj cDkKzi header"
   >
     <article
       className="sc-iCoHVE iXmOCz"

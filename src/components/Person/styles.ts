@@ -7,15 +7,18 @@ export const Div = styled.div`
 
   &.header {
     opacity: 0;
-    transition: opacity .5s linear;
+    transition: opacity 0.5s linear;
   }
-  
-  transition: transform .75s ease-in-out;
-  
+
+  transition: transform 0.75s ease-in-out;
+
   &.enter {
-    ${({ modifier }: { modifier: number }) => modifier % 2 === 0 ? `
+    ${({ modifier }: { modifier: number }) =>
+      modifier % 2 === 0
+        ? `
     transform: translateX(-100vw);
-    ` : `
+    `
+        : `
     transform: translateX(100vw);
     `}
 
@@ -33,7 +36,7 @@ export const Div = styled.div`
   transform: translateX(0);
 
   article {
-    transition: opacity .5s .5s linear;
+    transition: opacity 0.5s 0.5s linear;
     opacity: 1;
   }
 `

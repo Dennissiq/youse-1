@@ -4,8 +4,8 @@ import enhancer from './hooks'
 import ApiError from '../ApiError'
 import AppProps from '../../interfaces/AppProps'
 import GlobalStyle from '../../styles/global'
-import Loader from '../Loader'
-import { Title, InputHolder } from './styles'
+import SearchBar from '../SearchBar'
+import { Title } from './styles'
 import List from '../List'
 
 const App = ({
@@ -20,15 +20,7 @@ const App = ({
   <main>
     <GlobalStyle />
     <Title>Youse front-end test</Title>
-    <InputHolder>
-      <input
-        onChange={onInputChange}
-        type="text"
-        placeholder="Search name or email"
-        id="search-box"
-      />
-      <Loader isLoading={isLoading} />
-    </InputHolder>
+    <SearchBar onInputChange={onInputChange} isLoading={isLoading} />
     {!!apiError ? (
       <ApiError text={apiError} />
     ) : (
