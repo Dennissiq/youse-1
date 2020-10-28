@@ -5,7 +5,7 @@ export default () => {
   const [apiError, setApiError] = useState('')
   const [
     everyPeopleThatMatchesFilter,
-    setEveryPeopleThatMatchesFilter,
+    setEveryPeopleThatMatchesFilter
   ] = useState([])
   const [isLoading, setIsLoading] = useState(false)
   const [userIsTyping, setUserIsTyping] = useState(false)
@@ -23,6 +23,6 @@ export default () => {
     userIsTyping,
     setUserIsTyping,
     typingTimeoutId,
-    setTypingTimeoutId,
+    setTypingTimeoutId
   }
 }

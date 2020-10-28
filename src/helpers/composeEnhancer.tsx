@@ -6,7 +6,7 @@ export default (...layers: Array<Function>) => (BaseComponent: Function) => {
       const layerProps = layer.call(null, { ...props, ...prevProps })
       return {
         ...prevProps,
-        ...layerProps,
+        ...layerProps
       }
     }, {})
     return <BaseComponent {...props} {...hooksProps} />

@@ -3,7 +3,7 @@ import { itemsPerPage } from '../../../constants'
 import Person from '../../../interfaces/Person'
 
 export default ({
-  everyPeopleThatMatchesFilter,
+  everyPeopleThatMatchesFilter
 }: {
   everyPeopleThatMatchesFilter: Array<Person>
 }) => {
@@ -21,6 +21,6 @@ export default ({
 
   return {
     currentPage: getCurrentPage(),
-    pageCount: getPageCount(),
+    pageCount: getPageCount()
   }
 }

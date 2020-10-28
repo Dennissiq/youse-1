@@ -8,7 +8,7 @@ export const updateList = ({
   setFiltredItems,
   setEveryPeopleThatMatchesFilter,
   setApiError,
-  setIsLoading,
+  setIsLoading
 }: ApiFetcher) => {
   setIsLoading(true)
   const filter = getQueryString('filter') || ''
@@ -17,13 +17,13 @@ export const updateList = ({
   const skip = page * limit
 
   animateScroll.scrollToTop({
-    duration: 400,
+    duration: 400
   })
 
   API.fetch({
     filter,
     skip,
-    limit,
+    limit
   })
     .then(({ filtredItems, everyPeopleThatMatchesFilter }) => {
       setFiltredItems(filtredItems)
@@ -33,7 +33,7 @@ export const updateList = ({
         : `No results was found for ${filter} on page ${page + 1} :(`
       setApiError(apiError)
     })
-    .catch((err) => {
+    .catch(err => {
       setApiError(err)
     })
     .finally(() => {
@@ -45,17 +45,17 @@ export default ({
   setFiltredItems,
   setEveryPeopleThatMatchesFilter,
   setApiError,
-  setIsLoading,
+  setIsLoading
 }: ApiFetcher) => {
   const forceListUpdate = () =>
     updateList({
       setFiltredItems,
       setEveryPeopleThatMatchesFilter,
       setApiError,
-      setIsLoading,
+      setIsLoading
     })
 
   return {
-    forceListUpdate,
+    forceListUpdate
   }
 }

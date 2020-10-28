@@ -16,7 +16,7 @@ const App = ({
   onPaginationItemClick,
   isLoading,
   currentPage,
-  pageCount,
+  pageCount
 }: AppProps) => (
   <main>
     <GlobalStyle />

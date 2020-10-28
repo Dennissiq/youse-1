@@ -5,7 +5,7 @@ import { Div, Article, H3, Span } from './styles'
 export default ({
   item,
   modifier,
-  header,
+  header
 }: {
   item: Person
   modifier: number

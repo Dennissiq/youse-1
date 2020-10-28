@@ -10,7 +10,7 @@ const waitForTypingThenUpdateList = ({
   setUserIsTyping,
   setTypingTimeoutId,
   forceListUpdate,
-  typingTimeoutId,
+  typingTimeoutId
 }: OnInputChange) => {
   setUserIsTyping(true)
   setTypingTimeoutId(typingTimeout(forceListUpdate))
@@ -21,7 +21,7 @@ export default ({
   forceListUpdate,
   setUserIsTyping,
   setTypingTimeoutId,
-  typingTimeoutId,
+  typingTimeoutId
 }: OnInputChange) => ({
   onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.currentTarget
@@ -32,12 +32,12 @@ export default ({
       setUserIsTyping,
       setTypingTimeoutId,
       forceListUpdate,
-      typingTimeoutId,
+      typingTimeoutId
     })
   },
   onPaginationItemClick: (selectedItem: { selected: number }) => {
     const { selected } = selectedItem
     updateQueryString('page', `${selected}`)
     forceListUpdate()
-  },
+  }
 })

@@ -6,7 +6,7 @@ import List from './styles'
 
 export default ({
   filtredItems,
-  isLoading,
+  isLoading
 }: {
   filtredItems: Array<Person>
   isLoading: boolean
@@ -22,7 +22,7 @@ export default ({
         in={!isLoading}
         timeout={{
           enter: key * 100,
-          exit: 500,
+          exit: 500
         }}
         key={item.id}
       >

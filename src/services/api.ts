@@ -6,7 +6,7 @@ faker.seed(0)
 const defaultParams = {
   filter: false,
   skip: 0,
-  limit: false,
+  limit: false
 }
 
 export default {
@@ -18,17 +18,17 @@ export default {
 
       const { filter, skip, limit } = {
         ...defaultParams,
-        ...userParams,
+        ...userParams
       }
 
       const allItems = Array.from(Array(200)).map((_, i) => ({
         id: i,
         title: faker.name.findName(),
-        description: faker.internet.email(),
+        description: faker.internet.email()
       }))
 
       const everyPeopleThatMatchesFilter: Array<Person> = allItems.filter(
-        (item) =>
+        item =>
           !filter
             ? true
             : item.title.includes(filter) || item.description.includes(filter)
@@ -43,9 +43,9 @@ export default {
         () =>
           resolve({
             filtredItems: paginatedItems,
-            everyPeopleThatMatchesFilter,
+            everyPeopleThatMatchesFilter
           }),
         500
       )
-    }),
+    })
 }

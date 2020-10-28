@@ -4,7 +4,7 @@ import Loader from '../Loader'
 
 export default ({
   onInputChange,
-  isLoading,
+  isLoading
 }: {
   onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void
   isLoading: boolean

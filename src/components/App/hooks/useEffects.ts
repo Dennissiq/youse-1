@@ -12,7 +12,7 @@ export default ({
   setFiltredItems,
   setEveryPeopleThatMatchesFilter,
   setApiError,
-  setIsLoading,
+  setIsLoading
 }: AppEffects) => {
   useEffect(() => {
     updateSearchBoxValue()
@@ -20,13 +20,13 @@ export default ({
       setFiltredItems,
       setEveryPeopleThatMatchesFilter,
       setApiError,
-      setIsLoading,
+      setIsLoading
     })
   }, [
     setFiltredItems,
     setEveryPeopleThatMatchesFilter,
     setApiError,
-    setIsLoading,
+    setIsLoading
   ])
 
   return {}

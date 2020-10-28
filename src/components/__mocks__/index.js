@@ -4,7 +4,7 @@ export const filtredItems = [
   {
     id: 3,
     description: 'jinchbald2@nationalgeographic.com',
-    title: 'Inchbald',
+    title: 'Inchbald'
   },
   { id: 4, description: 'dnajera3@sbwire.com', title: 'Najera' },
   { id: 5, description: 'ncaton4@tinyurl.com', title: 'Caton' },
@@ -22,5 +22,5 @@ export const filtredItems = [
   { id: 17, description: 'rgilluleyg@earthlink.net', title: 'Gilluley' },
   { id: 18, description: 'bjerransh@huffingtonpost.com', title: 'Jerrans' },
   { id: 19, description: 'mtaxi@cdc.gov', title: 'Tax' },
-  { id: 20, description: 'mduffanj@bing.com', title: 'Duffan' },
+  { id: 20, description: 'mduffanj@bing.com', title: 'Duffan' }
 ]
