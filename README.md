@@ -46,7 +46,7 @@ As you'll see on the page, I'm taking the second option, where I handle the API 
 
 ## ⚛️ Stack and libs
 
-I choosed to use typescript, styled-components, react-paginate for pagination and react-transition-group to animate the list.
+I choosed to use typescript, styled-components, react-paginate for pagination, react-transition-group to animate the list and react-scroll to animate scrollTop on each search.
 
 ---
 
