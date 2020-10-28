@@ -8,7 +8,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    background: #7d3caf;
+    background: url('/background.jpg');
     font-size: 14px;
     color: ${yellow};
     font-family: sans-serif;

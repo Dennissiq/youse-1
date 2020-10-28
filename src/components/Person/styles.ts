@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Div = styled.div`
   padding: 30px 20px;
   background-color: ${({ modifier }: { modifier: number }) =>
-    modifier % 2 === 0 ? '#8D49C1' : '#7839A7'};
+    modifier % 2 === 0 ? '#7d3caf' : '#7839A7'};
 
   transition: transform 0.75s ease-in-out;
 
@@ -24,7 +24,7 @@ export const Div = styled.div`
   }
 
   &.header {
-    background-color: #7d3caf;
+    background-color: transparent;
   }
 
   position: relative;
