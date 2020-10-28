@@ -7,7 +7,8 @@ export const Div = styled.div`
 
   transition: transform 0.75s ease-in-out;
 
-  &.enter {
+  &.enter,
+  &.exit {
     ${({ modifier }: { modifier: number }) =>
       modifier % 2 === 0
         ? `

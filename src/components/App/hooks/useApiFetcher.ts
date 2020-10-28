@@ -1,3 +1,4 @@
+import { animateScroll } from 'react-scroll'
 import API from '../../../services/api'
 import { getQueryString } from '../../../helpers/url'
 import { itemsPerPage } from '../../../constants'
@@ -14,6 +15,8 @@ export const updateList = ({
   const page = ~~getQueryString('page') || 0
   const limit = ~~getQueryString('limit') || itemsPerPage
   const skip = page * limit
+
+  animateScroll.scrollToTop()
 
   API.fetch({
     filter,

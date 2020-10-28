@@ -21,9 +21,8 @@ export default ({
         in={!isLoading}
         timeout={{
           enter: key * 100,
-          exit: 0,
+          exit: 500,
         }}
-        unmountOnExit
         key={item.id}
       >
         <PersonDiv header={false} modifier={key} item={item} />
