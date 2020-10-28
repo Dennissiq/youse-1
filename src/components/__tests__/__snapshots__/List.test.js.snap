@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`<List /> renders correctly 1`] = `
 Array [
   <div
-    className="sc-bdnylx ALzsy header"
+    className="sc-bdnylx iVkQMX header"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -21,7 +21,7 @@ Array [
     </article>
   </div>,
   <div
-    className="sc-bdnylx iBkhAy"
+    className="sc-bdnylx iVkQMX"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -29,12 +29,354 @@ Array [
       <h3
         className="sc-dlnjPT ibOGxv"
       >
-        Estefania Kunze
+        Spurdens
       </h3>
       <span
         className="sc-hKFyIo beMXmz"
       >
-        Ahmad31@yahoo.com
+        fspurdens0@ucla.edu
+      </span>
+    </article>
+  </div>,
+  <div
+    className="sc-bdnylx bLKIAS"
+  >
+    <article
+      className="sc-gtssRu dLuDwB"
+    >
+      <h3
+        className="sc-dlnjPT ibOGxv"
+      >
+        Henrys
+      </h3>
+      <span
+        className="sc-hKFyIo beMXmz"
+      >
+        fhenrys1@squarespace.com
+      </span>
+    </article>
+  </div>,
+  <div
+    className="sc-bdnylx iVkQMX"
+  >
+    <article
+      className="sc-gtssRu dLuDwB"
+    >
+      <h3
+        className="sc-dlnjPT ibOGxv"
+      >
+        Inchbald
+      </h3>
+      <span
+        className="sc-hKFyIo beMXmz"
+      >
+        jinchbald2@nationalgeographic.com
+      </span>
+    </article>
+  </div>,
+  <div
+    className="sc-bdnylx bLKIAS"
+  >
+    <article
+      className="sc-gtssRu dLuDwB"
+    >
+      <h3
+        className="sc-dlnjPT ibOGxv"
+      >
+        Najera
+      </h3>
+      <span
+        className="sc-hKFyIo beMXmz"
+      >
+        dnajera3@sbwire.com
+      </span>
+    </article>
+  </div>,
+  <div
+    className="sc-bdnylx iVkQMX"
+  >
+    <article
+      className="sc-gtssRu dLuDwB"
+    >
+      <h3
+        className="sc-dlnjPT ibOGxv"
+      >
+        Caton
+      </h3>
+      <span
+        className="sc-hKFyIo beMXmz"
+      >
+        ncaton4@tinyurl.com
+      </span>
+    </article>
+  </div>,
+  <div
+    className="sc-bdnylx bLKIAS"
+  >
+    <article
+      className="sc-gtssRu dLuDwB"
+    >
+      <h3
+        className="sc-dlnjPT ibOGxv"
+      >
+        Stove
+      </h3>
+      <span
+        className="sc-hKFyIo beMXmz"
+      >
+        estove5@bloomberg.com
+      </span>
+    </article>
+  </div>,
+  <div
+    className="sc-bdnylx iVkQMX"
+  >
+    <article
+      className="sc-gtssRu dLuDwB"
+    >
+      <h3
+        className="sc-dlnjPT ibOGxv"
+      >
+        Stabbins
+      </h3>
+      <span
+        className="sc-hKFyIo beMXmz"
+      >
+        gstabbins6@smugmug.com
+      </span>
+    </article>
+  </div>,
+  <div
+    className="sc-bdnylx bLKIAS"
+  >
+    <article
+      className="sc-gtssRu dLuDwB"
+    >
+      <h3
+        className="sc-dlnjPT ibOGxv"
+      >
+        Audritt
+      </h3>
+      <span
+        className="sc-hKFyIo beMXmz"
+      >
+        baudritt7@noaa.gov
+      </span>
+    </article>
+  </div>,
+  <div
+    className="sc-bdnylx iVkQMX"
+  >
+    <article
+      className="sc-gtssRu dLuDwB"
+    >
+      <h3
+        className="sc-dlnjPT ibOGxv"
+      >
+        Drawmer
+      </h3>
+      <span
+        className="sc-hKFyIo beMXmz"
+      >
+        adrawmer8@theguardian.com
+      </span>
+    </article>
+  </div>,
+  <div
+    className="sc-bdnylx bLKIAS"
+  >
+    <article
+      className="sc-gtssRu dLuDwB"
+    >
+      <h3
+        className="sc-dlnjPT ibOGxv"
+      >
+        Denham
+      </h3>
+      <span
+        className="sc-hKFyIo beMXmz"
+      >
+        sdenham9@sfgate.com
+      </span>
+    </article>
+  </div>,
+  <div
+    className="sc-bdnylx iVkQMX"
+  >
+    <article
+      className="sc-gtssRu dLuDwB"
+    >
+      <h3
+        className="sc-dlnjPT ibOGxv"
+      >
+        Dowdall
+      </h3>
+      <span
+        className="sc-hKFyIo beMXmz"
+      >
+        pdowdalla@theatlantic.com
+      </span>
+    </article>
+  </div>,
+  <div
+    className="sc-bdnylx bLKIAS"
+  >
+    <article
+      className="sc-gtssRu dLuDwB"
+    >
+      <h3
+        className="sc-dlnjPT ibOGxv"
+      >
+        Laydon
+      </h3>
+      <span
+        className="sc-hKFyIo beMXmz"
+      >
+        rlaydonb@51.la
+      </span>
+    </article>
+  </div>,
+  <div
+    className="sc-bdnylx iVkQMX"
+  >
+    <article
+      className="sc-gtssRu dLuDwB"
+    >
+      <h3
+        className="sc-dlnjPT ibOGxv"
+      >
+        Allibone
+      </h3>
+      <span
+        className="sc-hKFyIo beMXmz"
+      >
+        iallibonec@addthis.com
+      </span>
+    </article>
+  </div>,
+  <div
+    className="sc-bdnylx bLKIAS"
+  >
+    <article
+      className="sc-gtssRu dLuDwB"
+    >
+      <h3
+        className="sc-dlnjPT ibOGxv"
+      >
+        Pavlasek
+      </h3>
+      <span
+        className="sc-hKFyIo beMXmz"
+      >
+        spavlasekd@ed.gov
+      </span>
+    </article>
+  </div>,
+  <div
+    className="sc-bdnylx iVkQMX"
+  >
+    <article
+      className="sc-gtssRu dLuDwB"
+    >
+      <h3
+        className="sc-dlnjPT ibOGxv"
+      >
+        Westcarr
+      </h3>
+      <span
+        className="sc-hKFyIo beMXmz"
+      >
+        lwestcarre@t-online.de
+      </span>
+    </article>
+  </div>,
+  <div
+    className="sc-bdnylx bLKIAS"
+  >
+    <article
+      className="sc-gtssRu dLuDwB"
+    >
+      <h3
+        className="sc-dlnjPT ibOGxv"
+      >
+        Woodier
+      </h3>
+      <span
+        className="sc-hKFyIo beMXmz"
+      >
+        dwoodierf@quantcast.com
+      </span>
+    </article>
+  </div>,
+  <div
+    className="sc-bdnylx iVkQMX"
+  >
+    <article
+      className="sc-gtssRu dLuDwB"
+    >
+      <h3
+        className="sc-dlnjPT ibOGxv"
+      >
+        Gilluley
+      </h3>
+      <span
+        className="sc-hKFyIo beMXmz"
+      >
+        rgilluleyg@earthlink.net
+      </span>
+    </article>
+  </div>,
+  <div
+    className="sc-bdnylx bLKIAS"
+  >
+    <article
+      className="sc-gtssRu dLuDwB"
+    >
+      <h3
+        className="sc-dlnjPT ibOGxv"
+      >
+        Jerrans
+      </h3>
+      <span
+        className="sc-hKFyIo beMXmz"
+      >
+        bjerransh@huffingtonpost.com
+      </span>
+    </article>
+  </div>,
+  <div
+    className="sc-bdnylx iVkQMX"
+  >
+    <article
+      className="sc-gtssRu dLuDwB"
+    >
+      <h3
+        className="sc-dlnjPT ibOGxv"
+      >
+        Tax
+      </h3>
+      <span
+        className="sc-hKFyIo beMXmz"
+      >
+        mtaxi@cdc.gov
+      </span>
+    </article>
+  </div>,
+  <div
+    className="sc-bdnylx bLKIAS"
+  >
+    <article
+      className="sc-gtssRu dLuDwB"
+    >
+      <h3
+        className="sc-dlnjPT ibOGxv"
+      >
+        Duffan
+      </h3>
+      <span
+        className="sc-hKFyIo beMXmz"
+      >
+        mduffanj@bing.com
       </span>
     </article>
   </div>,
