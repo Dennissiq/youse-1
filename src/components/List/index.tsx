@@ -2,6 +2,7 @@ import React from 'react'
 import { CSSTransition } from 'react-transition-group'
 import PersonDiv from '../Person'
 import Person from '../../interfaces/Person'
+import List from './styles'
 
 export default ({
   filtredItems,
@@ -10,7 +11,7 @@ export default ({
   filtredItems: Array<Person>
   isLoading: boolean
 }) => (
-  <>
+  <List>
     <PersonDiv
       modifier={0}
       header
@@ -28,5 +29,5 @@ export default ({
         <PersonDiv header={false} modifier={key} item={item} />
       </CSSTransition>
     ))}
-  </>
+  </List>
 )

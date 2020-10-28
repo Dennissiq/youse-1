@@ -16,7 +16,9 @@ export const updateList = ({
   const limit = ~~getQueryString('limit') || itemsPerPage
   const skip = page * limit
 
-  animateScroll.scrollToTop()
+  animateScroll.scrollToTop({
+    duration: 400,
+  })
 
   API.fetch({
     filter,
