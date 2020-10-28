@@ -5,6 +5,7 @@ import ApiError from '../ApiError'
 import AppProps from '../../interfaces/AppProps'
 import GlobalStyle from '../../styles/global'
 import SearchBar from '../SearchBar'
+import YouseLogo from '../YouseLogo'
 import { Title } from './styles'
 import List from '../List'
 
@@ -19,7 +20,8 @@ const App = ({
 }: AppProps) => (
   <main>
     <GlobalStyle />
-    <Title>Youse front-end test</Title>
+    <YouseLogo />
+    <Title>front-end test</Title>
     <SearchBar onInputChange={onInputChange} isLoading={isLoading} />
     {!!apiError ? (
       <ApiError text={apiError} />
