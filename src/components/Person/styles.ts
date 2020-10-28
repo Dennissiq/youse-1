@@ -3,12 +3,7 @@ import styled from 'styled-components'
 export const Div = styled.div`
   padding: 30px 20px;
   background-color: ${({ modifier }: { modifier: number }) =>
-    modifier % 2 === 0 ? '#6a418c' : '#7d3caf'};
-
-  &.header {
-    opacity: 0;
-    transition: opacity 0.5s linear;
-  }
+    modifier % 2 === 0 ? '#8D49C1' : '#7839A7'};
 
   transition: transform 0.75s ease-in-out;
 
@@ -27,9 +22,8 @@ export const Div = styled.div`
     }
   }
 
-  &.header.enter-done {
-    transform: translateX(0);
-    opacity: 1;
+  &.header {
+    background-color: #7d3caf;
   }
 
   position: relative;

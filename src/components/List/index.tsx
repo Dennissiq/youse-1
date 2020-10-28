@@ -11,15 +11,21 @@ export default ({
   isLoading: boolean
 }) => (
   <>
-    <CSSTransition in={!isLoading} timeout={200} unmountOnExit>
-      <PersonDiv
-        modifier={1}
-        header
-        item={{ id: 0, title: 'Name', description: 'Email' }}
-      />
-    </CSSTransition>
+    <PersonDiv
+      modifier={0}
+      header
+      item={{ id: 0, title: 'Name', description: 'Email' }}
+    />
     {filtredItems.map((item: Person, key: number) => (
-      <CSSTransition in={!isLoading} timeout={200} unmountOnExit key={item.id}>
+      <CSSTransition
+        in={!isLoading}
+        timeout={{
+          enter: key * 100,
+          exit: 0,
+        }}
+        unmountOnExit
+        key={item.id}
+      >
         <PersonDiv header={false} modifier={key} item={item} />
       </CSSTransition>
     ))}
