@@ -44,7 +44,12 @@ export default ({
     updateQueryString('page', `${selected}`)
     forceListUpdate()
   },
-  tryAgain: () => {
+  resetSearch: () => {
+    const searchBox = document.getElementById('search-box') as HTMLInputElement
+    searchBox.value = ''
+
+    updateQueryString('page', '0')
+    updateQueryString('filter', '')
     forceListUpdate()
   }
 })

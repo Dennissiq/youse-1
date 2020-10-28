@@ -19,7 +19,8 @@ const App = ({
   pageCount,
   forceListUpdate,
   currentFilter,
-  userIsTyping
+  userIsTyping,
+  resetSearch
 }: AppProps) => (
   <main>
     <GlobalStyle />
@@ -34,6 +35,7 @@ const App = ({
         code={apiError}
         isLoading={isLoading}
         userIsTyping={userIsTyping}
+        resetSearch={resetSearch}
       />
     ) : (
       <>

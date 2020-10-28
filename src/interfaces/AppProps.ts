@@ -13,4 +13,5 @@ export default interface AppProps {
   ) => void | undefined
   currentFilter: string
   userIsTyping: boolean
+  resetSearch: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
 }

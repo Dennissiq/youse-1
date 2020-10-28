@@ -8,7 +8,8 @@ export default ({
   page,
   filter,
   isLoading,
-  userIsTyping
+  userIsTyping,
+  resetSearch
 }: ApiError) => (
   <DivApiError>
     <SVGWarning xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320.83 320.83">
@@ -23,7 +24,10 @@ export default ({
         An error has occurred! Please <Span onClick={tryAgain}>try again.</Span>
       </div>
     ) : (
-      `No results was found for ${filter} on page ${page + 1} :(`
+      <div>
+        No results was found for {filter} on page {page + 1} - would you like to{' '}
+        <Span onClick={resetSearch}>reset your search</Span>?
+      </div>
     )}
   </DivApiError>
 )
