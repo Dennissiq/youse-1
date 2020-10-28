@@ -46,8 +46,17 @@ export default createGlobalStyle`
       align-items: center;
       justify-content: center;
       border-radius: 50%;
+      transition: background .2s ease-in;
       &:hover {
-        background-color: #6a418c;
+        background-color: #fff;
+      }
+    }
+
+    .previous, .next {
+      opacity: 1;
+      transition: opacity .3s linear;
+      &.disabled {
+        opacity: 0;
       }
     }
 
