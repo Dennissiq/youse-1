@@ -35,6 +35,7 @@ export default createGlobalStyle`
     align-items: center;
     width: 320px;
     margin: 40px auto;
+    padding: 0 20px;
 
     &__item a, &__dots a {
       width: 30px;
