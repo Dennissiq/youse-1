@@ -1,5 +1,7 @@
 # youse front-end test
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/efc496ba-09f7-4760-8c7d-13cbe8535bb1/deploy-status)](https://app.netlify.com/sites/youse-paulo/deploys)
+
 Link: https://youse-paulo.netlify.app/
 
 Hi! I hope you like my test!
