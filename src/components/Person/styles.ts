@@ -5,7 +5,8 @@ export const Div = styled.div`
   background-color: ${({ modifier }: { modifier: number }) =>
     modifier % 2 === 0 ? '#7d3caf' : '#7839A7'};
 
-  transition: transform 0.75s ease-in-out;
+  transition: all 0.75s ease-in-out;
+  opacity: 1;
 
   &.enter,
   &.exit {
@@ -21,6 +22,10 @@ export const Div = styled.div`
     article {
       opacity: 0;
     }
+  }
+
+  &.exit {
+    opacity: 0;
   }
 
   &.header {

@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<List /> renders correctly 1`] = `
-Array [
+<div
+  className="sc-eCApGN gdLJHU"
+>
   <div
-    className="sc-bdnylx iVkQMX header"
+    className="sc-bdnylx iHpAez header"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -19,9 +21,9 @@ Array [
         Email
       </span>
     </article>
-  </div>,
+  </div>
   <div
-    className="sc-bdnylx iVkQMX"
+    className="sc-bdnylx iHpAez"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -37,9 +39,9 @@ Array [
         fspurdens0@ucla.edu
       </span>
     </article>
-  </div>,
+  </div>
   <div
-    className="sc-bdnylx bLKIAS"
+    className="sc-bdnylx hAaLvF"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -55,9 +57,9 @@ Array [
         fhenrys1@squarespace.com
       </span>
     </article>
-  </div>,
+  </div>
   <div
-    className="sc-bdnylx iVkQMX"
+    className="sc-bdnylx iHpAez"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -73,9 +75,9 @@ Array [
         jinchbald2@nationalgeographic.com
       </span>
     </article>
-  </div>,
+  </div>
   <div
-    className="sc-bdnylx bLKIAS"
+    className="sc-bdnylx hAaLvF"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -91,9 +93,9 @@ Array [
         dnajera3@sbwire.com
       </span>
     </article>
-  </div>,
+  </div>
   <div
-    className="sc-bdnylx iVkQMX"
+    className="sc-bdnylx iHpAez"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -109,9 +111,9 @@ Array [
         ncaton4@tinyurl.com
       </span>
     </article>
-  </div>,
+  </div>
   <div
-    className="sc-bdnylx bLKIAS"
+    className="sc-bdnylx hAaLvF"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -127,9 +129,9 @@ Array [
         estove5@bloomberg.com
       </span>
     </article>
-  </div>,
+  </div>
   <div
-    className="sc-bdnylx iVkQMX"
+    className="sc-bdnylx iHpAez"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -145,9 +147,9 @@ Array [
         gstabbins6@smugmug.com
       </span>
     </article>
-  </div>,
+  </div>
   <div
-    className="sc-bdnylx bLKIAS"
+    className="sc-bdnylx hAaLvF"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -163,9 +165,9 @@ Array [
         baudritt7@noaa.gov
       </span>
     </article>
-  </div>,
+  </div>
   <div
-    className="sc-bdnylx iVkQMX"
+    className="sc-bdnylx iHpAez"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -181,9 +183,9 @@ Array [
         adrawmer8@theguardian.com
       </span>
     </article>
-  </div>,
+  </div>
   <div
-    className="sc-bdnylx bLKIAS"
+    className="sc-bdnylx hAaLvF"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -199,9 +201,9 @@ Array [
         sdenham9@sfgate.com
       </span>
     </article>
-  </div>,
+  </div>
   <div
-    className="sc-bdnylx iVkQMX"
+    className="sc-bdnylx iHpAez"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -217,9 +219,9 @@ Array [
         pdowdalla@theatlantic.com
       </span>
     </article>
-  </div>,
+  </div>
   <div
-    className="sc-bdnylx bLKIAS"
+    className="sc-bdnylx hAaLvF"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -235,9 +237,9 @@ Array [
         rlaydonb@51.la
       </span>
     </article>
-  </div>,
+  </div>
   <div
-    className="sc-bdnylx iVkQMX"
+    className="sc-bdnylx iHpAez"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -253,9 +255,9 @@ Array [
         iallibonec@addthis.com
       </span>
     </article>
-  </div>,
+  </div>
   <div
-    className="sc-bdnylx bLKIAS"
+    className="sc-bdnylx hAaLvF"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -271,9 +273,9 @@ Array [
         spavlasekd@ed.gov
       </span>
     </article>
-  </div>,
+  </div>
   <div
-    className="sc-bdnylx iVkQMX"
+    className="sc-bdnylx iHpAez"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -289,9 +291,9 @@ Array [
         lwestcarre@t-online.de
       </span>
     </article>
-  </div>,
+  </div>
   <div
-    className="sc-bdnylx bLKIAS"
+    className="sc-bdnylx hAaLvF"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -307,9 +309,9 @@ Array [
         dwoodierf@quantcast.com
       </span>
     </article>
-  </div>,
+  </div>
   <div
-    className="sc-bdnylx iVkQMX"
+    className="sc-bdnylx iHpAez"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -325,9 +327,9 @@ Array [
         rgilluleyg@earthlink.net
       </span>
     </article>
-  </div>,
+  </div>
   <div
-    className="sc-bdnylx bLKIAS"
+    className="sc-bdnylx hAaLvF"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -343,9 +345,9 @@ Array [
         bjerransh@huffingtonpost.com
       </span>
     </article>
-  </div>,
+  </div>
   <div
-    className="sc-bdnylx iVkQMX"
+    className="sc-bdnylx iHpAez"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -361,9 +363,9 @@ Array [
         mtaxi@cdc.gov
       </span>
     </article>
-  </div>,
+  </div>
   <div
-    className="sc-bdnylx bLKIAS"
+    className="sc-bdnylx hAaLvF"
   >
     <article
       className="sc-gtssRu dLuDwB"
@@ -379,6 +381,6 @@ Array [
         mduffanj@bing.com
       </span>
     </article>
-  </div>,
-]
+  </div>
+</div>
 `;
