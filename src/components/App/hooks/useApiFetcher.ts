@@ -30,7 +30,7 @@ export const updateList = ({
       setEveryPeopleThatMatchesFilter(everyPeopleThatMatchesFilter)
       const apiError = filtredItems.length
         ? ''
-        : `No results was found for ${filter} :(`
+        : `No results was found for ${filter} on page ${page} :(`
       setApiError(apiError)
     })
     .catch((err) => {
