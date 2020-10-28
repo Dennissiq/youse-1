@@ -1,4 +1,5 @@
 import faker from 'faker'
+import ListResponse from '../interfaces/ListResponse'
 import Person from '../interfaces/Person'
 
 faker.seed(0)
@@ -11,7 +12,7 @@ const defaultParams = {
 
 export default {
   fetch: (userParams: { skip: number; filter: string; limit: number }) =>
-    new Promise<any>((resolve, reject) => {
+    new Promise<ListResponse>((resolve, reject) => {
       if (Math.random() > 0.9) {
         return reject(503)
       }

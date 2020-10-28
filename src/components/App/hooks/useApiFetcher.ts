@@ -3,6 +3,7 @@ import API from '../../../services/api'
 import { getQueryString } from '../../../helpers/url'
 import { itemsPerPage } from '../../../constants'
 import ApiStatesSetter from '../../../interfaces/ApiStatesSetter'
+import ListResponse from '../../../interfaces/ListResponse'
 
 export const updateList = ({
   setFiltredItems,
@@ -25,7 +26,7 @@ export const updateList = ({
     skip,
     limit
   })
-    .then(({ filtredItems, everyPeopleThatMatchesFilter }) => {
+    .then(({ filtredItems, everyPeopleThatMatchesFilter }: ListResponse) => {
       setApiError(0)
       setFiltredItems(filtredItems)
       setEveryPeopleThatMatchesFilter(everyPeopleThatMatchesFilter)
