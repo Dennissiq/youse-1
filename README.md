@@ -36,9 +36,9 @@ $ git clone https://github.com/paulpetone/youse.git && cd youse && yarn
 ## About faker
 
 To solve the filter problem, I used query string as my states.
-I'm doing the pseudo request everytime that the users change the filter, page, or limit. This cause me a little dilema becase everytime that I call the API, it returns a hole new Array of People. So I asked myself if I should just do a single request and save the response on a state or treat like a real API where the database can change everytime, as the response.
+I'm doing the pseudo request everytime users change the filter, page, or limit. This caused me a little dilema becase everytime that I call the API, it returns a hole new Array of People. So I asked myself if I should just do a single request and save the response on a state or treat like a real API where the database can change everytime, as the response.
 
-As you'll see on the page, I'm taking the second option, where I handle the API as if it was a real API and like it could change anytime (it does hehe). That's the reason why when you go to the page 2 then go to the page 1, the results are different, or when you type somenthing that you are seeing that existis and on the next character it doesn't return anymore, because Faker are generating a new array on every request.
+As you'll see on the page, I'm taking the second option, where I handle the API as if it was a real API and it could change anytime (it does hehe). That's the reason why when you go to the page 2 then go to the page 1, the results are different, or when you type somenthing that you are seeing that existis and on the next character it doesn't return anymore, because Faker are generating a new array on every request.
 
 ---
 
