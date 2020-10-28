@@ -13,7 +13,7 @@ export default {
   fetch: (userParams: { skip: number; filter: string; limit: number }) =>
     new Promise<any>((resolve, reject) => {
       if (Math.random() > 0.9) {
-        return reject('An error has occurred! Please try again.')
+        return reject(503)
       }
 
       const { filter, skip, limit } = {
@@ -38,6 +38,10 @@ export default {
         skip,
         skip + limit
       )
+
+      if (!paginatedItems.length) {
+        return reject(404)
+      }
 
       setTimeout(
         () =>

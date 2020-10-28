@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 export default () => {
   const [filtredItems, setFiltredItems] = useState([])
-  const [apiError, setApiError] = useState('')
+  const [apiError, setApiError] = useState(0)
   const [
     everyPeopleThatMatchesFilter,
     setEveryPeopleThatMatchesFilter

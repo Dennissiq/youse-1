@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { getQueryString } from '../../../helpers/url'
-import AppEffects from '../../../interfaces/AppEffects'
+import ApiStatesSetter from '../../../interfaces/ApiStatesSetter'
 import { updateList } from './useApiFetcher'
 
 const updateSearchBoxValue = () => {
@@ -13,7 +13,7 @@ export default ({
   setEveryPeopleThatMatchesFilter,
   setApiError,
   setIsLoading
-}: AppEffects) => {
+}: ApiStatesSetter) => {
   useEffect(() => {
     updateSearchBoxValue()
     updateList({

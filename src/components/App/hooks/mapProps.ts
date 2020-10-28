@@ -19,8 +19,13 @@ export default ({
     return everyPeopleThatMatchesFilter.length / getLimit()
   }
 
+  const getCurrentFilter = () => {
+    return getQueryString('filter') || ''
+  }
+
   return {
     currentPage: getCurrentPage(),
-    pageCount: getPageCount()
+    pageCount: getPageCount(),
+    currentFilter: getCurrentFilter()
   }
 }

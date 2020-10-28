@@ -16,15 +16,25 @@ const App = ({
   onPaginationItemClick,
   isLoading,
   currentPage,
-  pageCount
+  pageCount,
+  forceListUpdate,
+  currentFilter,
+  userIsTyping
 }: AppProps) => (
   <main>
     <GlobalStyle />
     <YouseLogo />
     <Title>front-end test</Title>
     <SearchBar onInputChange={onInputChange} isLoading={isLoading} />
-    {!!apiError ? (
-      <ApiError text={apiError} />
+    {apiError >= 400 ? (
+      <ApiError
+        page={currentPage}
+        filter={currentFilter}
+        tryAgain={forceListUpdate}
+        code={apiError}
+        isLoading={isLoading}
+        userIsTyping={userIsTyping}
+      />
     ) : (
       <>
         <List isLoading={isLoading} filtredItems={filtredItems} />

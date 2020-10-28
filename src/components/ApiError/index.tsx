@@ -1,13 +1,29 @@
 import React from 'react'
-import { ApiError, SVGWarning } from './styles'
+import { DivApiError, SVGWarning, Span } from './styles'
+import ApiError from '../../interfaces/ApiError'
 
-export default ({ text }: { text: string }) => (
-  <ApiError>
+export default ({
+  code,
+  tryAgain,
+  page,
+  filter,
+  isLoading,
+  userIsTyping
+}: ApiError) => (
+  <DivApiError>
     <SVGWarning xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320.83 320.83">
       <path d="M21.617 290.246h277.604c9.469 0 17.013-4.553 20.168-12.184 2.904-7.011 1.36-14.8-4.107-21.212L180.497 39.684l-1.333-1.333c-5.009-5.009-11.667-7.767-18.748-7.767-7.082 0-13.739 2.758-18.743 7.767l-1.333 1.333L5.55 256.844c-5.466 6.413-7.016 14.207-4.106 21.212 3.159 7.632 10.698 12.19 20.173 12.19zM160.416 69.213L277.35 257.606H43.487L160.416 69.213z" />
       <path d="M160.416 105.345c-9.197 0-16.654 7.457-16.654 16.654v71.388c0 9.197 7.457 16.654 16.654 16.654s16.654-7.457 16.654-16.654v-71.388c.006-9.197-7.451-16.654-16.654-16.654z" />
       <circle cx="160.248" cy="234.903" r="16.486" />
     </SVGWarning>
-    {text}
-  </ApiError>
+    {isLoading || userIsTyping ? (
+      'Refreshing...'
+    ) : code > 404 ? (
+      <div>
+        An error has occurred! Please <Span onClick={tryAgain}>try again.</Span>
+      </div>
+    ) : (
+      `No results was found for ${filter} on page ${page + 1} :(`
+    )}
+  </DivApiError>
 )

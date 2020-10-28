@@ -2,14 +2,14 @@ import { animateScroll } from 'react-scroll'
 import API from '../../../services/api'
 import { getQueryString } from '../../../helpers/url'
 import { itemsPerPage } from '../../../constants'
-import ApiFetcher from '../../../interfaces/ApiFetcher'
+import ApiStatesSetter from '../../../interfaces/ApiStatesSetter'
 
 export const updateList = ({
   setFiltredItems,
   setEveryPeopleThatMatchesFilter,
-  setApiError,
-  setIsLoading
-}: ApiFetcher) => {
+  setIsLoading,
+  setApiError
+}: ApiStatesSetter) => {
   setIsLoading(true)
   const filter = getQueryString('filter') || ''
   const page = ~~getQueryString('page') || 0
@@ -26,15 +26,12 @@ export const updateList = ({
     limit
   })
     .then(({ filtredItems, everyPeopleThatMatchesFilter }) => {
+      setApiError(0)
       setFiltredItems(filtredItems)
       setEveryPeopleThatMatchesFilter(everyPeopleThatMatchesFilter)
-      const apiError = filtredItems.length
-        ? ''
-        : `No results was found for ${filter} on page ${page + 1} :(`
-      setApiError(apiError)
     })
-    .catch(err => {
-      setApiError(err)
+    .catch(errCode => {
+      setApiError(errCode)
     })
     .finally(() => {
       setIsLoading(false)
@@ -46,7 +43,7 @@ export default ({
   setEveryPeopleThatMatchesFilter,
   setApiError,
   setIsLoading
-}: ApiFetcher) => {
+}: ApiStatesSetter) => {
   const forceListUpdate = () =>
     updateList({
       setFiltredItems,

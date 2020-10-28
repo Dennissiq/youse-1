@@ -1,8 +1,12 @@
 import { updateQueryString } from '../../../helpers/url'
 import OnInputChange from '../../../interfaces/OnInputChange'
 
-const typingTimeout = (forceListUpdate: Function) =>
+const typingTimeout = (
+  forceListUpdate: Function,
+  setUserIsTyping: React.Dispatch<React.SetStateAction<boolean>>
+) =>
   setTimeout(() => {
+    setUserIsTyping(false)
     forceListUpdate()
   }, 500)
 
@@ -13,7 +17,7 @@ const waitForTypingThenUpdateList = ({
   typingTimeoutId
 }: OnInputChange) => {
   setUserIsTyping(true)
-  setTypingTimeoutId(typingTimeout(forceListUpdate))
+  setTypingTimeoutId(typingTimeout(forceListUpdate, setUserIsTyping))
   clearTimeout(typingTimeoutId)
 }
 
@@ -38,6 +42,9 @@ export default ({
   onPaginationItemClick: (selectedItem: { selected: number }) => {
     const { selected } = selectedItem
     updateQueryString('page', `${selected}`)
+    forceListUpdate()
+  },
+  tryAgain: () => {
     forceListUpdate()
   }
 })
