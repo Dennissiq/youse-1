@@ -1,5 +1,6 @@
 import { SVGLoader } from './styles'
 import React from 'react'
+import { darkPurple } from '../../constants'
 
 export default ({ isLoading }: { isLoading: boolean }) => (
   <SVGLoader
@@ -15,10 +16,10 @@ export default ({ isLoading }: { isLoading: boolean }) => (
       <path
         d="M50 24a26 26 0 1024.727 17.966"
         fill="none"
-        stroke="#7d3caf"
+        stroke={darkPurple}
         strokeWidth="14"
       />
-      <path d="M49 7v34l17-17L49 7" fill="#7d3caf" />
+      <path d="M49 7v34l17-17L49 7" fill={darkPurple} />
     </g>
   </SVGLoader>
 )

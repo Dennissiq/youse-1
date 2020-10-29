@@ -8,7 +8,7 @@ export const SVGLoader = styled.svg`
   margin: auto 0;
   opacity: ${({ isLoading }: { isLoading: boolean }) =>
     isLoading ? '1' : '0'};
-  animation: rotate infinite 2s 0.1s;
+  animation: rotate infinite 2s linear;
   transition: opacity 0.3s linear;
 
   @keyframes rotate {
