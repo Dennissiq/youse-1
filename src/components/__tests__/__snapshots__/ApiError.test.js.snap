@@ -21,6 +21,18 @@ exports[`renders correctly 1`] = `
       r="16.486"
     />
   </svg>
-  Error
+  <div>
+    No results was found for 
+     on page 
+    NaN
+     - would you like to
+     
+    <span
+      className="sc-dlnjPT thlZS"
+    >
+      reset your search
+    </span>
+    ?
+  </div>
 </div>
 `;
